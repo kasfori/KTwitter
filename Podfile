@@ -1,17 +1,18 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
-# Uncomment this line if you're using Swift
-# use_frameworks!
+platform :ios, '8.0'
 
-target 'KTwitter' do
+pod "AFNetworking"
 
-end
+pod 'BDBOAuth1Manager', '~> 1.5'
+pod "DateTools"
 
-target 'KTwitterTests' do
+pod 'SVPullToRefresh'
+pod "SVProgressHUD"
+pod 'STTwitter', '~> 0.2.2'
 
-end
 
-target 'KTwitterUITests' do
-
-end
-
+#pod 'MBProgressHUD'
+#pod "BlurImageProcessor"
+#pod 'pop', '~> 1.0'
+#pod 'TTTAttributedLabel'
+#pod 'ChameleonFramework'
+#pod 'VGParallaxHeader'
