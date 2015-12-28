@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginController.h"
+#import "Account.h"
 
 @interface AppDelegate ()
 
@@ -18,18 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    
-//    LoginViewController *lvc = [[LoginViewController alloc] init];
-//    
-//    
-//    
-//    self.window.rootViewController = lvc;
-//    
-//    
-//    
-//    [self.window makeKeyAndVisible];
+    // 沙盒路径
+    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
+    Account *account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     
+    if (account) {
+        
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        
+        UIViewController *MainTabBar = [board instantiateViewControllerWithIdentifier:@"MainTabBar"];
+        
+        self.window.rootViewController = MainTabBar;
+    } 
    return YES;
 }
 

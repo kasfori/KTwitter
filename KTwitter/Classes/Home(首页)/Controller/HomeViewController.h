@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <STTwitter.h>
 
-@interface HomeViewController : UITableViewController
+@interface HomeViewController : UITableViewController <UITableViewDataSource, UIActionSheetDelegate, STTwitterRequestProtocol>
+
+@property (nonatomic, strong) NSArray *statuses;
+
+@property (nonatomic, strong) STTwitterAPI *twitter;
+
+
+- (void)loadstatuses;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import <STTwitter.h>
+#import "LoginController.h"
 
 @interface HomeViewController ()
 
@@ -17,39 +19,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadstatuses];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)loadstatuses
+{
+    [_twitter getHomeTimelineSinceID:nil
+                               count:20
+                        successBlock:^(NSArray *statuses) {
+                            
+                            NSLog(@"-- statuses: %@", statuses);
+                            
+                            self.statuses = statuses;
+                            
+                            [self.tableView reloadData];
+                            
+                        } errorBlock:^(NSError *error) {
+                            NSLog(@"-- %@", [error localizedDescription]);
+                        }];
+
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return [self.statuses count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"STTwitterTVCellIdentifier"];
     
-    // Configure the cell...
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"STTwitterTVCellIdentifier"];
+    }
+    
+    NSDictionary *status = [self.statuses objectAtIndex:indexPath.row];
+    
+    NSString *text = [status valueForKey:@"text"];
+    NSString *screenName = [status valueForKeyPath:@"user.screen_name"];
+    NSString *dateString = [status valueForKey:@"created_at"];
+    
+    cell.textLabel.text = text;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"@%@ | %@", screenName, dateString];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

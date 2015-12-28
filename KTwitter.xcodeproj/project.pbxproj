@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A45ED1A1C2D31EF00BF7314 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45ED191C2D31EF00BF7314 /* LoginController.m */; };
+		0A3E36C51C311F9F00A670BF /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36BA1C311F9F00A670BF /* LoginController.m */; };
+		0A3E36C61C311F9F00A670BF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36BD1C311F9F00A670BF /* Account.m */; };
+		0A3E36C81C311F9F00A670BF /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36C11C311F9F00A670BF /* Tweet.m */; };
+		0A3E36C91C311F9F00A670BF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36C31C311F9F00A670BF /* User.m */; };
 		0A45ED4D1C2D692900BF7314 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A45ED4C1C2D692900BF7314 /* Accounts.framework */; };
 		0A45ED4F1C2D693000BF7314 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A45ED4E1C2D693000BF7314 /* Twitter.framework */; };
 		0A484A201C290D7C008BF643 /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4849FD1C290D7C008BF643 /* DynamicViewController.m */; };
@@ -19,12 +22,9 @@
 		0A4F88701C2AFDC7000ACF6A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4F886F1C2AFDC7000ACF6A /* UIBarButtonItem+Extension.m */; };
 		0A4F88731C2AFF20000ACF6A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4F88721C2AFF20000ACF6A /* UIView+Extension.m */; };
 		0A6C9BDC1C2AE6A100C7DCA7 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C9BDB1C2AE6A100C7DCA7 /* MainNavController.m */; };
-		0A6F25221C2A334800E3E429 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F25211C2A334800E3E429 /* Media.m */; };
 		0A6F252A1C2A412D00E3E429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F25281C2A412D00E3E429 /* LaunchScreen.storyboard */; };
 		0A6F252D1C2A88D800E3E429 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F252C1C2A88D800E3E429 /* MainTabBarController.m */; };
 		0A7DCCCC1C2928ED00FEFF9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DCCCB1C2928ED00FEFF9C /* Main.storyboard */; };
-		0A7DCEFE1C2938EC00FEFF9C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DCEFD1C2938EC00FEFF9C /* User.m */; };
-		0A7DCF011C29390900FEFF9C /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DCF001C29390900FEFF9C /* Tweet.m */; };
 		0A92D4681C27FAF900A3A094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A92D4671C27FAF900A3A094 /* Assets.xcassets */; };
 		0A92D4761C27FAFA00A3A094 /* KTwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A92D4751C27FAFA00A3A094 /* KTwitterTests.m */; };
 		0A92D4811C27FAFA00A3A094 /* KTwitterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A92D4801C27FAFA00A3A094 /* KTwitterUITests.m */; };
@@ -49,8 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A45ED181C2D31EF00BF7314 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
-		0A45ED191C2D31EF00BF7314 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		0A3E36B91C311F9F00A670BF /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		0A3E36BA1C311F9F00A670BF /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		0A3E36BC1C311F9F00A670BF /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		0A3E36BD1C311F9F00A670BF /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		0A3E36C01C311F9F00A670BF /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		0A3E36C11C311F9F00A670BF /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		0A3E36C21C311F9F00A670BF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0A3E36C31C311F9F00A670BF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		0A45ED4A1C2D67BA00BF7314 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0A45ED4C1C2D692900BF7314 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0A45ED4E1C2D693000BF7314 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -71,16 +77,10 @@
 		0A4F88721C2AFF20000ACF6A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		0A6C9BDA1C2AE6A100C7DCA7 /* MainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavController.h; sourceTree = "<group>"; };
 		0A6C9BDB1C2AE6A100C7DCA7 /* MainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavController.m; sourceTree = "<group>"; };
-		0A6F25201C2A334800E3E429 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
-		0A6F25211C2A334800E3E429 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		0A6F25291C2A412D00E3E429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A6F252B1C2A88D800E3E429 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		0A6F252C1C2A88D800E3E429 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		0A7DCCCB1C2928ED00FEFF9C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		0A7DCEFC1C2938EC00FEFF9C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		0A7DCEFD1C2938EC00FEFF9C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		0A7DCEFF1C29390900FEFF9C /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
-		0A7DCF001C29390900FEFF9C /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		0A92D4581C27FAF900A3A094 /* KTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A92D4671C27FAF900A3A094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A92D46C1C27FAF900A3A094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +123,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3E36B71C311F9F00A670BF /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				0A3E36B81C311F9F00A670BF /* Controller */,
+				0A3E36BB1C311F9F00A670BF /* Model */,
+				0A3E36C41C311F9F00A670BF /* View */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		0A3E36B81C311F9F00A670BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A3E36B91C311F9F00A670BF /* LoginController.h */,
+				0A3E36BA1C311F9F00A670BF /* LoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A3E36BB1C311F9F00A670BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A3E36BC1C311F9F00A670BF /* Account.h */,
+				0A3E36BD1C311F9F00A670BF /* Account.m */,
+				0A3E36C01C311F9F00A670BF /* Tweet.h */,
+				0A3E36C11C311F9F00A670BF /* Tweet.m */,
+				0A3E36C21C311F9F00A670BF /* User.h */,
+				0A3E36C31C311F9F00A670BF /* User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A3E36C41C311F9F00A670BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0A4849F91C290D7C008BF643 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,12 +229,6 @@
 		0A484A041C290D7C008BF643 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A7DCEFC1C2938EC00FEFF9C /* User.h */,
-				0A7DCEFD1C2938EC00FEFF9C /* User.m */,
-				0A7DCEFF1C29390900FEFF9C /* Tweet.h */,
-				0A7DCF001C29390900FEFF9C /* Tweet.m */,
-				0A6F25201C2A334800E3E429 /* Media.h */,
-				0A6F25211C2A334800E3E429 /* Media.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +243,7 @@
 		0A484A061C290D7C008BF643 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				0A3E36B71C311F9F00A670BF /* OAuth */,
 				0A484A071C290D7C008BF643 /* Category */,
 				0A484A0C1C290D7C008BF643 /* Controller */,
 				0A484A0D1C290D7C008BF643 /* Lib */,
@@ -238,8 +272,6 @@
 				0A6F252C1C2A88D800E3E429 /* MainTabBarController.m */,
 				0A6C9BDA1C2AE6A100C7DCA7 /* MainNavController.h */,
 				0A6C9BDB1C2AE6A100C7DCA7 /* MainNavController.m */,
-				0A45ED181C2D31EF00BF7314 /* LoginController.h */,
-				0A45ED191C2D31EF00BF7314 /* LoginController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -602,17 +634,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3E36C91C311F9F00A670BF /* User.m in Sources */,
 				0A4F88731C2AFF20000ACF6A /* UIView+Extension.m in Sources */,
-				0A7DCF011C29390900FEFF9C /* Tweet.m in Sources */,
-				0A7DCEFE1C2938EC00FEFF9C /* User.m in Sources */,
 				0A6F252D1C2A88D800E3E429 /* MainTabBarController.m in Sources */,
+				0A3E36C61C311F9F00A670BF /* Account.m in Sources */,
 				0A484A271C290D7C008BF643 /* ProfileViewController.m in Sources */,
-				0A45ED1A1C2D31EF00BF7314 /* LoginController.m in Sources */,
 				0A484A241C290D7C008BF643 /* AppDelegate.m in Sources */,
 				0A6C9BDC1C2AE6A100C7DCA7 /* MainNavController.m in Sources */,
+				0A3E36C51C311F9F00A670BF /* LoginController.m in Sources */,
 				0A484A201C290D7C008BF643 /* DynamicViewController.m in Sources */,
+				0A3E36C81C311F9F00A670BF /* Tweet.m in Sources */,
 				0A4F88701C2AFDC7000ACF6A /* UIBarButtonItem+Extension.m in Sources */,
-				0A6F25221C2A334800E3E429 /* Media.m in Sources */,
 				0A484A251C290D7C008BF643 /* main.m in Sources */,
 				0A484A261C290D7C008BF643 /* MessageViewController.m in Sources */,
 				0A484A211C290D7C008BF643 /* HomeViewController.m in Sources */,
