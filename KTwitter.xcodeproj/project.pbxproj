@@ -11,6 +11,7 @@
 		0A3E36C61C311F9F00A670BF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36BD1C311F9F00A670BF /* Account.m */; };
 		0A3E36C81C311F9F00A670BF /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36C11C311F9F00A670BF /* Tweet.m */; };
 		0A3E36C91C311F9F00A670BF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36C31C311F9F00A670BF /* User.m */; };
+		0A42FC1C1C31708D0037F2B7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A42FC1B1C31708D0037F2B7 /* Social.framework */; };
 		0A45ED4D1C2D692900BF7314 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A45ED4C1C2D692900BF7314 /* Accounts.framework */; };
 		0A45ED4F1C2D693000BF7314 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A45ED4E1C2D693000BF7314 /* Twitter.framework */; };
 		0A484A201C290D7C008BF643 /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4849FD1C290D7C008BF643 /* DynamicViewController.m */; };
@@ -57,6 +58,7 @@
 		0A3E36C11C311F9F00A670BF /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		0A3E36C21C311F9F00A670BF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		0A3E36C31C311F9F00A670BF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0A42FC1B1C31708D0037F2B7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0A45ED4A1C2D67BA00BF7314 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0A45ED4C1C2D692900BF7314 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0A45ED4E1C2D693000BF7314 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -100,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A42FC1C1C31708D0037F2B7 /* Social.framework in Frameworks */,
 				0A45ED4F1C2D693000BF7314 /* Twitter.framework in Frameworks */,
 				0A45ED4D1C2D692900BF7314 /* Accounts.framework in Frameworks */,
 				66CE0DC74E46F938421EDC4C /* libPods.a in Frameworks */,
@@ -445,6 +448,7 @@
 		708F5FDF326B52D1E9EA3EF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A42FC1B1C31708D0037F2B7 /* Social.framework */,
 				0A45ED4E1C2D693000BF7314 /* Twitter.framework */,
 				0A45ED4C1C2D692900BF7314 /* Accounts.framework */,
 				0A45ED4A1C2D67BA00BF7314 /* CoreGraphics.framework */,

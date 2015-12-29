@@ -9,106 +9,91 @@
 #import "HomeViewController.h"
 #import <STTwitter.h>
 #import "LoginController.h"
+#import "Account.h"
 
 @interface HomeViewController ()
+
+/** 存储推文 */
+@property (nonatomic, strong) NSArray *statuses;
+
+@property (nonatomic, strong) STTwitterAPI *twitter;
+
+@property (nonatomic, strong) Account *account;
 
 @end
 
 @implementation HomeViewController
 
+
+- (Account *)account
+{
+    if (!_account) {
+        // 沙盒
+        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
+        _account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+
+    }
+    return _account;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self loadstatuses];
+
 }
 
+/** 加载推文 */
 -(void)loadstatuses
 {
-    [_twitter getHomeTimelineSinceID:nil
-                               count:20
-                        successBlock:^(NSArray *statuses) {
-                            
-                            NSLog(@"-- statuses: %@", statuses);
-                            
-                            self.statuses = statuses;
-                            
-                            [self.tableView reloadData];
-                            
-                        } errorBlock:^(NSError *error) {
-                            NSLog(@"-- %@", [error localizedDescription]);
-                        }];
-
-}
-
-#pragma mark - Table view data source
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.statuses count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"STTwitterTVCellIdentifier"];
+    self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:twitterConsumerKey
+                                            consumerSecret:twitterConsumerSecret
+                                                oauthToken:self.account.access_token
+                                          oauthTokenSecret:self.account.accessToken_secret];
     
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"STTwitterTVCellIdentifier"];
-    }
-    
-    NSDictionary *status = [self.statuses objectAtIndex:indexPath.row];
-    
-    NSString *text = [status valueForKey:@"text"];
-    NSString *screenName = [status valueForKeyPath:@"user.screen_name"];
-    NSString *dateString = [status valueForKey:@"created_at"];
-    
-    cell.textLabel.text = text;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"@%@ | %@", screenName, dateString];
-    
-    return cell;
+    [self.twitter verifyCredentialsWithUserSuccessBlock:^(NSString *username, NSString *userID) {
+        
+        NSLog(@"Success with username: %@ and userID: %@", username, userID);
+        
+        // GetUserTimeline
+        //        [twitter getUserTimelineWithScreenName:screenName
+        //                                  successBlock:^(NSArray *statuses) {
+        //                                      NSLog(@"Statuses: %@", statuses);
+        //
+        //                                  }
+        //                                    errorBlock:^(NSError *error) {
+        //                                      NSLog(@"Failed with error: %@", [error localizedDescription]);
+        //                                  }];
+        
+        // GetUserTimeline with count
+        //        [twitter getUserTimelineWithScreenName:screenName
+        //                                         count:50
+        //                                  successBlock:^(NSArray *statuses) {
+        //                                      NSLog(@"Statuses: %@", statuses);
+        //                                  }
+        //                                    errorBlock:^(NSError *error) {
+        //                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
+        //                                    }];
+        
+        // Get Home timeline
+        [self.twitter getHomeTimelineSinceID:nil
+                                  count:2
+                           successBlock:^(NSArray *statuses) {
+ 
+                               self.statuses = statuses;
+                               
+                               NSLog(@"-- statuses: %@", statuses);
+                               
+                           }
+                             errorBlock:^(NSError *error) {
+                                 NSLog(@"Failed with error: %@", [error localizedDescription]);
+                             }];
+        
+    } errorBlock:^(NSError *error) {
+        NSLog(@"Failed with error: %@", [error localizedDescription]);
+    }];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

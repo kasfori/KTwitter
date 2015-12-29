@@ -31,6 +31,7 @@
         UIViewController *MainTabBar = [board instantiateViewControllerWithIdentifier:@"MainTabBar"];
         
         self.window.rootViewController = MainTabBar;
+
     } 
    return YES;
 }

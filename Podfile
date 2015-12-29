@@ -1,10 +1,8 @@
 platform :ios, '8.0'
 
 pod "AFNetworking"
-
-pod 'BDBOAuth1Manager', '~> 1.5'
+pod 'SDWebImage', '~> 3.7.3'
 pod "DateTools"
-
 pod 'SVPullToRefresh'
 pod "SVProgressHUD"
 pod 'STTwitter', '~> 0.2.2'
