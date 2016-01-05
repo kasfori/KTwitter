@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0A3E36C51C311F9F00A670BF /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36BA1C311F9F00A670BF /* LoginController.m */; };
 		0A3E36C61C311F9F00A670BF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36BD1C311F9F00A670BF /* Account.m */; };
-		0A3E36C81C311F9F00A670BF /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36C11C311F9F00A670BF /* Tweet.m */; };
-		0A3E36C91C311F9F00A670BF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E36C31C311F9F00A670BF /* User.m */; };
 		0A42FC1C1C31708D0037F2B7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A42FC1B1C31708D0037F2B7 /* Social.framework */; };
 		0A45ED4D1C2D692900BF7314 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A45ED4C1C2D692900BF7314 /* Accounts.framework */; };
 		0A45ED4F1C2D693000BF7314 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A45ED4E1C2D693000BF7314 /* Twitter.framework */; };
@@ -23,12 +21,17 @@
 		0A4F88701C2AFDC7000ACF6A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4F886F1C2AFDC7000ACF6A /* UIBarButtonItem+Extension.m */; };
 		0A4F88731C2AFF20000ACF6A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4F88721C2AFF20000ACF6A /* UIView+Extension.m */; };
 		0A6C9BDC1C2AE6A100C7DCA7 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C9BDB1C2AE6A100C7DCA7 /* MainNavController.m */; };
+		0A6F00891C35255600393259 /* LoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F00881C35255600393259 /* LoadMoreFooter.m */; };
+		0A6F008B1C35258D00393259 /* LoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F008A1C35258D00393259 /* LoadMoreFooter.xib */; };
 		0A6F252A1C2A412D00E3E429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F25281C2A412D00E3E429 /* LaunchScreen.storyboard */; };
 		0A6F252D1C2A88D800E3E429 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F252C1C2A88D800E3E429 /* MainTabBarController.m */; };
 		0A7DCCCC1C2928ED00FEFF9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DCCCB1C2928ED00FEFF9C /* Main.storyboard */; };
 		0A92D4681C27FAF900A3A094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A92D4671C27FAF900A3A094 /* Assets.xcassets */; };
 		0A92D4761C27FAFA00A3A094 /* KTwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A92D4751C27FAFA00A3A094 /* KTwitterTests.m */; };
 		0A92D4811C27FAFA00A3A094 /* KTwitterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A92D4801C27FAFA00A3A094 /* KTwitterUITests.m */; };
+		0AEDC24E1C322D50000CF28D /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDC24B1C322D50000CF28D /* Tweet.m */; };
+		0AEDC24F1C322D50000CF28D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDC24D1C322D50000CF28D /* User.m */; };
+		0AEDC2521C3298CA000CF28D /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDC2511C3298C9000CF28D /* Media.m */; };
 		66CE0DC74E46F938421EDC4C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC81BB6C3F7DD2DA9177729 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,10 +57,6 @@
 		0A3E36BA1C311F9F00A670BF /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		0A3E36BC1C311F9F00A670BF /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		0A3E36BD1C311F9F00A670BF /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
-		0A3E36C01C311F9F00A670BF /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
-		0A3E36C11C311F9F00A670BF /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
-		0A3E36C21C311F9F00A670BF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		0A3E36C31C311F9F00A670BF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		0A42FC1B1C31708D0037F2B7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0A45ED4A1C2D67BA00BF7314 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0A45ED4C1C2D692900BF7314 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -79,6 +78,9 @@
 		0A4F88721C2AFF20000ACF6A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		0A6C9BDA1C2AE6A100C7DCA7 /* MainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavController.h; sourceTree = "<group>"; };
 		0A6C9BDB1C2AE6A100C7DCA7 /* MainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavController.m; sourceTree = "<group>"; };
+		0A6F00871C35255600393259 /* LoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreFooter.h; sourceTree = "<group>"; };
+		0A6F00881C35255600393259 /* LoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreFooter.m; sourceTree = "<group>"; };
+		0A6F008A1C35258D00393259 /* LoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreFooter.xib; sourceTree = "<group>"; };
 		0A6F25291C2A412D00E3E429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A6F252B1C2A88D800E3E429 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		0A6F252C1C2A88D800E3E429 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
@@ -92,6 +94,12 @@
 		0A92D47C1C27FAFA00A3A094 /* KTwitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTwitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A92D4801C27FAFA00A3A094 /* KTwitterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTwitterUITests.m; sourceTree = "<group>"; };
 		0A92D4821C27FAFA00A3A094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AEDC24A1C322D50000CF28D /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		0AEDC24B1C322D50000CF28D /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		0AEDC24C1C322D50000CF28D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0AEDC24D1C322D50000CF28D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0AEDC2501C3298C9000CF28D /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		0AEDC2511C3298C9000CF28D /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		50370BE0255F3A691DB271AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D9D69711B73063FB56C301E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DCC81BB6C3F7DD2DA9177729 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,10 +158,6 @@
 			children = (
 				0A3E36BC1C311F9F00A670BF /* Account.h */,
 				0A3E36BD1C311F9F00A670BF /* Account.m */,
-				0A3E36C01C311F9F00A670BF /* Tweet.h */,
-				0A3E36C11C311F9F00A670BF /* Tweet.m */,
-				0A3E36C21C311F9F00A670BF /* User.h */,
-				0A3E36C31C311F9F00A670BF /* User.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				0A484A011C290D7C008BF643 /* Controller */,
-				0A484A041C290D7C008BF643 /* Model */,
+				0AEDC2491C322D50000CF28D /* Model */,
 				0A484A051C290D7C008BF643 /* View */,
 			);
 			path = "Home(首页)";
@@ -229,16 +233,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		0A484A041C290D7C008BF643 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0A484A051C290D7C008BF643 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A6F00871C35255600393259 /* LoadMoreFooter.h */,
+				0A6F00881C35255600393259 /* LoadMoreFooter.m */,
+				0A6F008A1C35258D00393259 /* LoadMoreFooter.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,6 +436,19 @@
 			path = KTwitterUITests;
 			sourceTree = "<group>";
 		};
+		0AEDC2491C322D50000CF28D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AEDC24A1C322D50000CF28D /* Tweet.h */,
+				0AEDC24B1C322D50000CF28D /* Tweet.m */,
+				0AEDC24C1C322D50000CF28D /* User.h */,
+				0AEDC24D1C322D50000CF28D /* User.m */,
+				0AEDC2501C3298C9000CF28D /* Media.h */,
+				0AEDC2511C3298C9000CF28D /* Media.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1059CDF280B63B682EB8C676 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A6F252A1C2A412D00E3E429 /* LaunchScreen.storyboard in Resources */,
+				0A6F008B1C35258D00393259 /* LoadMoreFooter.xib in Resources */,
 				0A7DCCCC1C2928ED00FEFF9C /* Main.storyboard in Resources */,
 				0A92D4681C27FAF900A3A094 /* Assets.xcassets in Resources */,
 			);
@@ -638,18 +652,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3E36C91C311F9F00A670BF /* User.m in Sources */,
 				0A4F88731C2AFF20000ACF6A /* UIView+Extension.m in Sources */,
+				0AEDC24E1C322D50000CF28D /* Tweet.m in Sources */,
 				0A6F252D1C2A88D800E3E429 /* MainTabBarController.m in Sources */,
 				0A3E36C61C311F9F00A670BF /* Account.m in Sources */,
 				0A484A271C290D7C008BF643 /* ProfileViewController.m in Sources */,
 				0A484A241C290D7C008BF643 /* AppDelegate.m in Sources */,
+				0AEDC2521C3298CA000CF28D /* Media.m in Sources */,
 				0A6C9BDC1C2AE6A100C7DCA7 /* MainNavController.m in Sources */,
 				0A3E36C51C311F9F00A670BF /* LoginController.m in Sources */,
+				0AEDC24F1C322D50000CF28D /* User.m in Sources */,
 				0A484A201C290D7C008BF643 /* DynamicViewController.m in Sources */,
-				0A3E36C81C311F9F00A670BF /* Tweet.m in Sources */,
 				0A4F88701C2AFDC7000ACF6A /* UIBarButtonItem+Extension.m in Sources */,
 				0A484A251C290D7C008BF643 /* main.m in Sources */,
+				0A6F00891C35255600393259 /* LoadMoreFooter.m in Sources */,
 				0A484A261C290D7C008BF643 /* MessageViewController.m in Sources */,
 				0A484A211C290D7C008BF643 /* HomeViewController.m in Sources */,
 			);

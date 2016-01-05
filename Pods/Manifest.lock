@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - DateTools (1.7.0)
+  - MJExtension (3.0.8)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -25,6 +26,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - DateTools
+  - MJExtension (~> 3.0.8)
   - SDWebImage (~> 3.7.3)
   - STTwitter (~> 0.2.2)
   - SVProgressHUD
@@ -33,6 +35,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  MJExtension: 12d2875959b4a0f936ae86b22a1eb6b0251c50ba
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   STTwitter: eb85d8770ddb0f8989f341cf41ea875e90ac6e7f
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1

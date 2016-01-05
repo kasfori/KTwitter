@@ -6,6 +6,7 @@ pod "DateTools"
 pod 'SVPullToRefresh'
 pod "SVProgressHUD"
 pod 'STTwitter', '~> 0.2.2'
+pod 'MJExtension', '~> 3.0.8'
 
 
 #pod 'MBProgressHUD'
