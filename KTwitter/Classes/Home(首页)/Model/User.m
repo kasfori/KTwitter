@@ -8,15 +8,30 @@
 //
 
 #import "User.h"
-#import <MJExtension.h>
+
+@interface User()
+
+@property (nonatomic, strong) NSDictionary *dictionary;
+
+
+@end
 
 @implementation User
 
-// 将字典里的 description属性 转成对应模型的 Description属性
-
-+ (NSDictionary *)mj_replacedKeyFromPropertyName
++ (User *)initWithDictionary:(NSDictionary *)dictionary
 {
-    return @{@"Description" : @"description"};
+        User *user = [[User alloc] init];
+    
+        user.name = dictionary[@"name"];
+        user.screen_name = dictionary[@"screen_name"];
+        user.profile_banner_url = dictionary[@"profile_banner_url"];
+        user.profile_image_url = dictionary[@"profile_image_url"];
+        user.Description = dictionary[@"description"];
+        user.friends_count = dictionary[@"friends_count"];
+        user.followers_count = dictionary[@"followers_count"];
+        user.statuses_count = dictionary[@"statuses_count"];
+    
+    return user;
 }
 
 @end

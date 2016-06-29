@@ -15,30 +15,41 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - DateTools (1.7.0)
-  - MJExtension (3.0.8)
-  - SDWebImage (3.7.3):
-    - SDWebImage/Core (= 3.7.3)
-  - SDWebImage/Core (3.7.3)
-  - STTwitter (0.2.2)
+  - MJExtension (3.0.10)
+  - MJPhotoBrowser (1.0.2):
+    - SDWebImage
+    - SVProgressHUD
+    - YLGIFImage
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - SVProgressHUD (1.1.3)
   - SVPullToRefresh (0.4.1)
+  - UITableView+FDTemplateLayoutCell (1.4)
+  - XXNibBridge (2.2.3)
+  - YLGIFImage (0.11)
 
 DEPENDENCIES:
   - AFNetworking
   - DateTools
   - MJExtension (~> 3.0.8)
+  - MJPhotoBrowser (~> 1.0.2)
   - SDWebImage (~> 3.7.3)
-  - STTwitter (~> 0.2.2)
   - SVProgressHUD
   - SVPullToRefresh
+  - UITableView+FDTemplateLayoutCell (~> 1.4.beta)
+  - XXNibBridge (~> 2.2.3)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
-  MJExtension: 12d2875959b4a0f936ae86b22a1eb6b0251c50ba
-  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
-  STTwitter: eb85d8770ddb0f8989f341cf41ea875e90ac6e7f
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJPhotoBrowser: f55e8490231f44a78ca6455105a1c798a142c95f
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  XXNibBridge: 70adcf1e85a2b5500d9de5f12781944dc51b0521
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
 COCOAPODS: 0.39.0

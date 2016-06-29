@@ -20,19 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // 沙盒路径
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
-    Account *account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-    
-    if (account) {
-        
+    NSDictionary *data = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"kAccessTokenKey"];
+    if (data) {
         UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        
         UIViewController *MainTabBar = [board instantiateViewControllerWithIdentifier:@"MainTabBar"];
-        
         self.window.rootViewController = MainTabBar;
-
     } 
    return YES;
 }
@@ -100,7 +92,7 @@
     
     LoginController *vc = (LoginController *)[[self window] rootViewController];
     [vc setOAuthToken:token oauthVerifier:verifier];
-
+    
     
     return YES;
 }

@@ -7,22 +7,35 @@
 //
 
 #import <Foundation/Foundation.h>
+@class STTwitterAPI, User;
 
-@interface Account : NSObject <NSCoding>
+@interface Account : NSObject
+
+@property (nonatomic, strong) STTwitterAPI *twitter;
+
+@property (nonatomic, strong) User *user;
+
+///**  screenName  */
+//@property (nonatomic, copy) NSString *screen_name;
+//
+///**  userID  */
+//@property (nonatomic, copy) NSString *user_id;
+//
+///**  AccessToken  */
+//@property (nonatomic, copy) NSString *access_token;
+//
+//@property (nonatomic, copy) NSString *verifier;
+//
+///**  AccessTokenSecret  */
+//@property (nonatomic, copy) NSString *accessToken_secret;
 
 
-/**  screenName  */
-@property (nonatomic, copy) NSString *screen_name;
+//+ (instancetype)accountWithDict:(NSDictionary *)dict;
 
-/**  userID  */
-@property (nonatomic, copy) NSString *user_id;
+-(void)getUserInfo:(NSString *)userID;
 
-/**  AccessToken  */
-@property (nonatomic, copy) NSString *access_token;
++ (Account *)instancewithoAuthToken: (NSString*)token secret:(NSString*)secret;
 
-/**  AccessTokenSecret  */
-@property (nonatomic, copy) NSString *accessToken_secret;
-
-+ (instancetype)accountWithDict:(NSDictionary *)dict;
+-(void)logout;
 
 @end

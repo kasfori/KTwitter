@@ -7,10 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STTwitter.h"
-
-extern NSString *const twitterConsumerKey;
-extern NSString *const twitterConsumerSecret;
 
 @interface LoginController : UIViewController
 

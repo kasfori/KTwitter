@@ -8,10 +8,16 @@
 
 #import "LoginController.h"
 #import "MainTabBarController.h"
-#import "Account.h"
+#import "STTwitterAPI.h"
+#import "HomeViewController.h"
 
-NSString *const twitterConsumerKey = @"fnqM9ctoYFUvgdCdafTg";
-NSString *const twitterConsumerSecret = @"HRzhFm3QNg4GOl9blL2Bvv2lBY31SZEhRMUaCjdQ0Mo";
+////官方key
+//#define TWITTER_CONSUMER_KEY @"IQKbtAYlXLripLGPWd0HUA"
+//#define TWITTER_CONSUMER_SECRET @"GgDYlkSvaPxGxC4X8liwpUoqKwwr3lCADbz8A7ADU"
+
+#define TWITTER_CONSUMER_KEY @"LtDZT4MSUZalnz9CbGZSs2tCH"
+#define TWITTER_CONSUMER_SECRET @"IjAp2rOMnVCO4zRgSYDmanTybDvPFAEMKsbzHsSdpXwKVk2CA3"
+
 
 @interface LoginController ()
 
@@ -24,53 +30,64 @@ NSString *const twitterConsumerSecret = @"HRzhFm3QNg4GOl9blL2Bvv2lBY31SZEhRMUaCj
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
 }
 
 - (IBAction)loginWeb:(id)sender {
     
-    self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:twitterConsumerKey
-                                                 consumerSecret:twitterConsumerSecret];
+    self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:TWITTER_CONSUMER_KEY
+                                                 consumerSecret:TWITTER_CONSUMER_SECRET];
     
     [self.twitter postTokenRequest:^(NSURL *url, NSString *oauthToken) {
         
-        NSLog(@"-- url: %@", url);
-        NSLog(@"-- oauthToken: %@", oauthToken);
-        
         [[UIApplication sharedApplication] openURL:url];
         
-        UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        //[self performSelector:@selector(haha) withObject:sender afterDelay:2];
+        if (url) {
+              [self haha];
+        }
         
-        UIViewController *MainTabBar = [board instantiateViewControllerWithIdentifier:@"MainTabBar"];
-        
-        [self presentViewController:MainTabBar animated:YES completion:nil];
+      
         
     } authenticateInsteadOfAuthorize:NO
                     forceLogin:@(YES)
                     screenName:nil
                  oauthCallback:@"myapp://"
                     errorBlock:^(NSError *error) {
+
                         NSLog(@"-- error: %@", error);
                     }];
+
 }
+
+
+- (void)haha
+{
+    
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    UIViewController *MainTabBar = [board instantiateViewControllerWithIdentifier:@"MainTabBar"];
+    
+    [self presentViewController:MainTabBar animated:YES completion:nil];
+    
+}
+
 
 - (void)setOAuthToken:(NSString *)token oauthVerifier:(NSString *)verifier
 {
     
     [self.twitter postAccessTokenRequestWithPIN:verifier successBlock:^(NSString *oauthToken, NSString *oauthTokenSecret, NSString *userID, NSString *screenName) {
-        NSLog(@"-- screenName: %@  --  userID: %@ --AccessToken: %@  --AccessTokenSecret: %@", screenName ,userID,oauthToken,oauthTokenSecret);
-        
-        // 沙盒路径
-        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
-        
-        Account *account = [[Account alloc] init];
-        account.screen_name = screenName;
-        account.user_id = userID;
-        account.access_token = oauthToken;
-        account.accessToken_secret = oauthTokenSecret;
-        
-        [NSKeyedArchiver archiveRootObject:account toFile:path];
+//        NSLog(@"-- screenName: %@  --  userID: %@ --AccessToken: %@  --AccessTokenSecret: %@", screenName ,userID,oauthToken,oauthTokenSecret);
+      
+        NSDictionary *data = @{     @"oauth_token" : oauthToken,
+                                    @"oauth_token_secret" : oauthTokenSecret,
+                                    @"user_id" : userID,
+                                    @"screen_name" : screenName,
+                                    @"oauth_verifier" : verifier
+                                    
+                                    };
+    
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"kAccessTokenKey"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
     } errorBlock:^(NSError *error) {
         

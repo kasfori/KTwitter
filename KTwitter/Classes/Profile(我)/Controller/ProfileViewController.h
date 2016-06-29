@@ -6,8 +6,10 @@
 //  Copyright © 2015年 K. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ARSegmentPageController.h"
 
-@interface ProfileViewController : UIViewController
+
+@interface ProfileViewController : ARSegmentPageController
+
 
 @end
