@@ -13,7 +13,7 @@
 Demo Project
 ==============
 
-#####项目效果图
+#####演示项目
 
 <img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Home%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png" width="320">
 <img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Dynamic%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png" width="320"> 
