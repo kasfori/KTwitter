@@ -12,7 +12,6 @@
 
 Demo Project
 ==============
-See `Demo/YYKitDemo.xcodeproj`
 
 #####项目效果图
 
