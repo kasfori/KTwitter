@@ -86,7 +86,7 @@
 
 如图,Cell使用`Xib`创建.使用`autolayout`,设置各控件间距,并将显示推文文字的label设置为numberOfLines=0，高度不设置。以此实现文字的自动换行。Cell其他对应位置的控件数据通过set方法来设置，代码如下：
 
-```
+```objective-c
 - (void)setTweet:(Tweet *)tweet
 {
     _tweet = tweet;
@@ -159,7 +159,7 @@ Cell中的媒体部分，显示图片的调用了`MJPhotoBrowser`框架，视频
 
 视频播放：
 
-```
+```objective-c
 - (void)videoTap:(UITapGestureRecognizer *)tap
 {
     LSPlayerView* playerView = [LSPlayerView playerView];
@@ -175,7 +175,7 @@ Cell中的回复按钮定义了一个block来实现业务逻辑，block设置两
 
 .h文件
 
-```
+```objective-c
 #import <UIKit/UIKit.h>
 
 typedef void (^ButtnBlock)(NSString *name , NSString *scrName);
@@ -191,7 +191,7 @@ typedef void (^ButtnBlock)(NSString *name , NSString *scrName);
 
 .m文件
 
-```
+```objective-c
 - (IBAction)clickReply:(id)sender {
     if (_ButtnBlock) {
   self.ButtnBlock(self.tweet.user.name ,self.tweet.user.screen_name);
@@ -203,7 +203,7 @@ Cell中的转推按钮，通过JSON中的`retweeted_status`字段来判断是否
 
 转推按钮：
 
-```
+```objective-c
 - (IBAction)clickRetweet:(id)sender {
 if (self.tweet.retweeted_status) {
             
@@ -262,7 +262,7 @@ if (self.tweet.retweeted_status) {
 
 收藏按钮：
 
-```
+```objective-c
 - (IBAction)clickFavorite:(id)sender {
     
     if (self.tweet.retweeted_status) {
@@ -352,7 +352,7 @@ Cell的总体思路是，通过`Xib`建立，使用`autolayout`调整控件的�
 
 程序一启动，直接调用Home页的`setupDownRefresh`方法，方法里面创建了一个`UIRefreshControl`控制器，通过控制器来控制用户手动下拉刷新和进入首页即刻刷新的状态，里面调用了`loadNewStatus`方法来加载推文数据，代码如下：
 
-```
+```objective-c
 - (void)setupDownRefresh
 {
     // 1.添加刷新控件
@@ -373,7 +373,7 @@ Cell的总体思路是，通过`Xib`建立，使用`autolayout`调整控件的�
 
 `loadNewStatus`方法的业务逻辑，取出`ID`最大的推文，通过比较`ID`大小排列推文的顺序，将`ID`大的推文放在推文数组的前面，以此类推，从大到小。通过`since_id`来获取推文的数量，代码如下：
 
-```
+```objective-c
 - (void)loadNewStatus:(UIRefreshControl *)control
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -432,7 +432,7 @@ Cell的总体思路是，通过`Xib`建立，使用`autolayout`调整控件的�
 
 上拉加载更多的推文通过`loadMoreStatus`方法实现，通过比较`max_id`，将`max_id`大的推文拼接到推文数组的后面，然后刷新`tableView`,实现代码如下：
 
-```
+```objective-c
 - (void)loadMoreStatus
 {
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -486,7 +486,7 @@ Cell的总体思路是，通过`Xib`建立，使用`autolayout`调整控件的�
 
 .h
 
-```
+```objective-c
 /**
  *  根据请求参数去沙盒中加载缓存的推文数据
  *
@@ -505,7 +505,7 @@ Cell的总体思路是，通过`Xib`建立，使用`autolayout`调整控件的�
 
 .m
 
-```
+```objective-c
 static FMDatabase *_db;
 + (void)initialize
 {
