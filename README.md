@@ -10,17 +10,8 @@
 
 - [4-Profile页的实现](https://github.com/kasfori/KTwitter/blob/master/demo%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/4-Profile%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
 
-2、主要模块截图.
-#####Home页模块
-![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Home%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png)
-
-#####Dynamic页模块
-![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Dynamic%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png)
-
-#####Profile页模块
-![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Profile%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png)
-
-
-3、演示效果图.
-#####gif效果图
-![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/demo.gif)
+2、项目效果图.
+<img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Home%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png" width="320">
+<img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Dynamic%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png" width="320"> 
+<img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Profile%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png" width="320">
+<img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/demo.gif" width="320">
