@@ -324,14 +324,14 @@ if (self.tweet.retweeted_status) {
 
 Cell的行高计算，在推文模型中定义了`cellHeight`属性，在Cell的set方法中实现如下代码：
 
-```
+```objective-c
 self.tweet.cellHeight = CGRectGetMaxY(self.buttonsView.frame) + 10;
 
 ```
 
 最后在头文件中提供一个类方法，让外界调用，代码如下：
 
-```
+```objective-c
 + (instancetype)tweetcellWithTableView:(UITableView *)tableView
 {
     static NSString *identifier= @"tweet";
