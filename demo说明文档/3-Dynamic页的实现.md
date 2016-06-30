@@ -6,7 +6,7 @@
 
 程序切换到`Dynamic`页，直接调用`setupDownRefresh`方法，方法里面创建了一个`UIRefreshControl`控制器，通过控制器来控制用户手动下拉刷新和进入`Dynamic`页即刻刷新的状态，里面调用了`loadNewStatus`方法来加载自己的动态数据，在`viewDidLoad `方法中调用，代码如下：
 
-```
+```objective-c
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -25,7 +25,7 @@
 
 进入`Dynamic`页显示个人动态代码：
 
-```
+```objective-c
 
 - (void)loadNewStatus:(UIRefreshControl *)control
 {
