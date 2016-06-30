@@ -29,3 +29,10 @@
 4.  `pod 'LSPlayer'`.
 5.  `pod 'AFNetworking`.
 6.  `pod 'SDWebImage`.
+
+待办事项
+----------
+
+- 修复第一次启动程序不能获取数据的bug
+- 完善Profile模块的功能
+- 代码重构
