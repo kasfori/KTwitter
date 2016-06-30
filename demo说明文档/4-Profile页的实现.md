@@ -8,7 +8,7 @@ Profile页面分为上下两个部分，头部采用了一个`XIB`来显示个�
 
 头部控制器继承`ARSegmentPage`,在.m文件实现它的对象方法实现下拉放大效果，关键代码如下：
 
-```
+```objective-c
 
 - (void)updateHeadPhotoWithTopInset:(CGFloat)inset {
     CGFloat ratio = (inset - 64)/200.0;
@@ -27,7 +27,7 @@ Profile页面分为上下两个部分，头部采用了一个`XIB`来显示个�
 
 关键代码如下：
 
-```
+```objective-c
 -(NSString *)segmentTitle
 {
     return @"推文";
@@ -42,7 +42,7 @@ Profile页面分为上下两个部分，头部采用了一个`XIB`来显示个�
 
 然后在控制器实现推文的请求数据以便显示，同样是通过`STTwitter`相关API发送数据请求，代码如下：
 
-```
+```objective-c
 - (void)getUserTimeline
 {
     NSDictionary *data = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"kAccessTokenKey"];
