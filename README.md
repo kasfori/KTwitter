@@ -19,3 +19,13 @@ Demo Project
 <img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Dynamic%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png" width="320"> 
 <img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Profile%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png" width="320">
 <img src="https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/demo.gif" width="320">
+
+主要使用的第三方框架
+==============
+
+1.  `pod 'STTwitter'`.
+2.  `pod 'FMDB`.
+3.  `pod 'MJPhotoBrowser`.
+4.  `pod 'LSPlayer'`.
+5.  `pod 'AFNetworking`.
+6.  `pod 'SDWebImage`.
