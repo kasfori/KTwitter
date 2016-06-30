@@ -86,7 +86,7 @@
     [self loadNewStatus:control];
 }
 
-/** 加载推文 */
+/** 加载动态数据 */
 - (void)loadNewStatus:(UIRefreshControl *)control
 {
     

@@ -10,7 +10,6 @@
 #import "ProfileCell.h"
 #import "UIImage+ImageEffects.h"
 #import "TweetViewController.h"
-#import "MediaViewController.h"
 #import "FavoriteViewController.h"
 #import "UIView+Extension.h"
 
@@ -31,7 +30,7 @@ void *ProfileCellInsetObserver = &ProfileCellInsetObserver;
 {
  
     TweetViewController *tweetTable = [[TweetViewController alloc] initWithNibName:@"TweetViewController" bundle:nil];
-    //MediaViewController *mediaTable = [[MediaViewController alloc] initWithNibName:@"MediaViewController" bundle:nil];
+
     FavoriteViewController *favTable = [[FavoriteViewController alloc] initWithNibName:@"FavoriteViewController" bundle:nil];
     
     

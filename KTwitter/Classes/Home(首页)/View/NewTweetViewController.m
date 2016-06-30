@@ -40,7 +40,6 @@
         NSString *token = [data valueForKey:@"oauth_token"];
         NSString *secret = [data valueForKey:@"oauth_token_secret"];
         self.account = [Account instancewithoAuthToken:token secret:secret];
-        
     }
     return self;
 }

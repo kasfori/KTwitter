@@ -36,18 +36,18 @@
     
     self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:TWITTER_CONSUMER_KEY
                                                  consumerSecret:TWITTER_CONSUMER_SECRET];
-    
     [self.twitter postTokenRequest:^(NSURL *url, NSString *oauthToken) {
         
         [[UIApplication sharedApplication] openURL:url];
         
         //[self performSelector:@selector(haha) withObject:sender afterDelay:2];
         if (url) {
-              [self haha];
+            UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            
+            UIViewController *MainTabBar = [board instantiateViewControllerWithIdentifier:@"MainTabBar"];
+            
+            [self presentViewController:MainTabBar animated:YES completion:nil];
         }
-        
-      
-        
     } authenticateInsteadOfAuthorize:NO
                     forceLogin:@(YES)
                     screenName:nil
@@ -56,41 +56,23 @@
 
                         NSLog(@"-- error: %@", error);
                     }];
-
 }
 
-
-- (void)haha
-{
-    
-    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    
-    UIViewController *MainTabBar = [board instantiateViewControllerWithIdentifier:@"MainTabBar"];
-    
-    [self presentViewController:MainTabBar animated:YES completion:nil];
-    
-}
-
-
+//储存账号信息到沙盒
 - (void)setOAuthToken:(NSString *)token oauthVerifier:(NSString *)verifier
 {
     
     [self.twitter postAccessTokenRequestWithPIN:verifier successBlock:^(NSString *oauthToken, NSString *oauthTokenSecret, NSString *userID, NSString *screenName) {
-//        NSLog(@"-- screenName: %@  --  userID: %@ --AccessToken: %@  --AccessTokenSecret: %@", screenName ,userID,oauthToken,oauthTokenSecret);
-      
-        NSDictionary *data = @{     @"oauth_token" : oauthToken,
-                                    @"oauth_token_secret" : oauthTokenSecret,
-                                    @"user_id" : userID,
-                                    @"screen_name" : screenName,
-                                    @"oauth_verifier" : verifier
-                                    
-                                    };
-    
+        NSDictionary *data = @{ @"oauth_token" : oauthToken,
+                                @"oauth_token_secret" : oauthTokenSecret,
+                                @"user_id" : userID,
+                                @"screen_name" : screenName,
+                                @"oauth_verifier" : verifier
+                              };
         [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"kAccessTokenKey"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
     } errorBlock:^(NSError *error) {
-        
         NSLog(@"-- %@", [error localizedDescription]);
     }];
     

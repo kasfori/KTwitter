@@ -108,8 +108,6 @@
 		0AF252411D080A44000E676F /* ARSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2523E1D080A44000E676F /* ARSegmentView.m */; };
 		0AF252451D080E2F000E676F /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF252431D080E2F000E676F /* TweetViewController.m */; };
 		0AF252461D080E2F000E676F /* TweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF252441D080E2F000E676F /* TweetViewController.xib */; };
-		0AF2524A1D080E4C000E676F /* MediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF252481D080E4C000E676F /* MediaViewController.m */; };
-		0AF2524B1D080E4C000E676F /* MediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF252491D080E4C000E676F /* MediaViewController.xib */; };
 		0AF2524F1D080EA0000E676F /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2524D1D080EA0000E676F /* FavoriteViewController.m */; };
 		0AF252501D080EA0000E676F /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2524E1D080EA0000E676F /* FavoriteViewController.xib */; };
 		0AF252531D0814F5000E676F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF252521D0814F5000E676F /* UIImage+ImageEffects.m */; };
@@ -323,9 +321,6 @@
 		0AF252421D080E2F000E676F /* TweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewController.h; sourceTree = "<group>"; };
 		0AF252431D080E2F000E676F /* TweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewController.m; sourceTree = "<group>"; };
 		0AF252441D080E2F000E676F /* TweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetViewController.xib; sourceTree = "<group>"; };
-		0AF252471D080E4C000E676F /* MediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaViewController.h; sourceTree = "<group>"; };
-		0AF252481D080E4C000E676F /* MediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaViewController.m; sourceTree = "<group>"; };
-		0AF252491D080E4C000E676F /* MediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaViewController.xib; sourceTree = "<group>"; };
 		0AF2524C1D080EA0000E676F /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
 		0AF2524D1D080EA0000E676F /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
 		0AF2524E1D080EA0000E676F /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
@@ -639,9 +634,6 @@
 				0AF252421D080E2F000E676F /* TweetViewController.h */,
 				0AF252431D080E2F000E676F /* TweetViewController.m */,
 				0AF252441D080E2F000E676F /* TweetViewController.xib */,
-				0AF252471D080E4C000E676F /* MediaViewController.h */,
-				0AF252481D080E4C000E676F /* MediaViewController.m */,
-				0AF252491D080E4C000E676F /* MediaViewController.xib */,
 				0AF2524C1D080EA0000E676F /* FavoriteViewController.h */,
 				0AF2524D1D080EA0000E676F /* FavoriteViewController.m */,
 				0AF2524E1D080EA0000E676F /* FavoriteViewController.xib */,
@@ -1032,7 +1024,6 @@
 				0AB4C3011CF25A1B00942BBA /* WMPlayer.bundle in Resources */,
 				0AC275691CF2386200FA3552 /* playerView.bundle in Resources */,
 				0A05B88C1CEF77960032494B /* MediaDetailView2.xib in Resources */,
-				0AF2524B1D080E4C000E676F /* MediaViewController.xib in Resources */,
 				0A6F008B1C35258D00393259 /* LoadMoreFooter.xib in Resources */,
 				0A47D9071CE706E900812DB1 /* MediaCell3.xib in Resources */,
 				0A7DCCCC1C2928ED00FEFF9C /* Main.storyboard in Resources */,
@@ -1120,7 +1111,6 @@
 				0A5CAC061CF14B7000C013C5 /* VideoCell.m in Sources */,
 				0AEDC24E1C322D50000CF28D /* Tweet.m in Sources */,
 				0AB4C31F1CF25A2100942BBA /* MASCompositeConstraint.m in Sources */,
-				0AF2524A1D080E4C000E676F /* MediaViewController.m in Sources */,
 				0AB4C3231CF25A2100942BBA /* MASViewAttribute.m in Sources */,
 				0AC275441CF2182800FA3552 /* ERPlayer.m in Sources */,
 				0ADBD17F1CFD3FC400858EDD /* STTwitterHTML.m in Sources */,

@@ -13,7 +13,6 @@
 #import <NSDate+DateTools.h>
 #import "TweetPhoto.h"
 #import <MJExtension.h>
-#import "ERPlayer.h"
 #import "LSPlayerView.h"
 #import "Account.h"
 #import "STTwitter.h"

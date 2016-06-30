@@ -50,23 +50,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView reloadData];
-    //[self setupDownRefresh];
-    [self setupUpRefresh];
     [self getUserTimeline];
     
     
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-}
-
-/**
- *  上拉刷新
- */
-- (void)setupUpRefresh
-{
-    LoadMoreFooter *footer = [LoadMoreFooter footer];
-    footer.hidden = YES;
-    self.tableView.tableFooterView = footer;
 }
 
 - (void)getUserTimeline

@@ -29,6 +29,8 @@
     // Initialization code
 }
 
+
+
 - (UIImageView *)backgroundImageView {
     return self.bkImageView;
 }
