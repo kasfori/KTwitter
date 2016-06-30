@@ -18,7 +18,7 @@
 ![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Dynamic%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png)
 
 #####Profile页模块
-![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Profie%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png)
+![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/Profile%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0.png)
 
 
 3、演示效果图.
