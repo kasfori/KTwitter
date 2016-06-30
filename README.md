@@ -22,5 +22,5 @@
 
 
 3、演示效果图.
-#####gif效果
+#####gif效果图
 ![](https://raw.githubusercontent.com/kasfori/KTwitter/master/demo%E7%9B%B8%E5%85%B3%E6%88%AA%E5%9B%BE/demo.gif)
